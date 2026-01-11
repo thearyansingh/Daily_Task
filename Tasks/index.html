@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -16,9 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=dehaze" />
   </head>
   <body>
-    <input type="checkbox" id="theme-toggle" />
+    <!-- <input type="checkbox" id="theme-toggle" /> -->
     <div class="app">
       <header class="header-div">
         <span class="head-name">DevAryan</span>
@@ -33,7 +35,32 @@
           <a href="https://www.linkedin.com/in/aryan-singh-a49b92226/">
             <button class="head-button">click me</button></a
           >
-          <!-- <label for="theme-toggle" class="toggle-label">🌙 / ☀️</label> -->
+          <label for="theme-toggle" class="toggle-label">🌙  ☀️</label>
+      <input type="checkbox" id="menu-toggle" />
+      <!-- hamburger -->
+      <label for="menu-toggle" class="hamburger-label">
+       <span id="hamburger-icon" class="material-symbols-outlined">
+      dehaze
+    </span>
+    </label>
+    <!-- sidebar -->
+     <nav class="sidebar">
+    <ul class="sidebar-list">
+      <input type="checkbox" id="menu-toggle" />
+     <!-- hamburger -->
+     <label for="menu-toggle" class="hamburger-label">
+      <span id="hamburger-icon" class="material-symbols-outlined">
+     dehaze
+   </span>
+   </label>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Skills">Skills</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+  
         </div>
       </header>
       <section id="About">
@@ -170,60 +197,41 @@ id="Experience" >
       </section>
       <section id="Contact">
         <h2>Contact Us</h2>
-        <div class="contact-block">
-          <img src="contact.avif" height="472px" width="50%" alt="" />
-          <form action="/register">
-            <fieldset class="form-field">
-              <div class="input-box">
-                <label>Name </label>
-                <input
-                  type="text"
-                  placeholder="your name"
-                  required
-                  minlength="3"
-                  title="enter your full name "
-                />
-              </div>
-              <div class="input-box">
-                <label>Email</label>
-                <input
-                  type=""
-                  placeholder="your Email"
-                  required
-                  minlength="2"
-                  oninput="this"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}"
-                  title="Email must be like example@gmail.com"
-                />
-              </div>
-              <div class="input-box">
-                <label for="phone">Phone Number:</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="XXX-XXX-XXX"
-                  title="Format: 123-456-7890"
-                  required
-                  oninvalid="this.setCustomValidity('Please enter a valid 10-digit Indian phone number')"
-                  oninput="this.setCustomValidity('')"
-                />
-              </div>
+      <div class="contact-block">
 
-              <div class="input-box">
-                <label>Drop a message </label>
-                <textarea
-                  placeholder="your message"
-                  required
-                  minlength="20"
-                  maxlength="300"
-                >
-                </textarea>
-              </div>
-            </fieldset>
+  <img src="contact.avif" alt="Contact illustration" class="contact-image" />
 
-            <button class="form-btn" type="submit">Submit</button>
-          </form>
-        </div>
+  <form class="contact-form" action="/register">
+    <fieldset class="form-field">
+      <!-- <legend>Get in touch</legend> -->
+
+      <div class="input-box">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required minlength="3" />
+      </div>
+
+      <div class="input-box">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="input-box">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" placeholder="123-456-7890" required />
+      </div>
+
+      <div class="input-box">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your message" required minlength="20"></textarea>
+      </div>
+
+    </fieldset>
+
+    <button class="form-btn" type="submit">Submit</button>
+  </form>
+
+</div>
+
       </section>
     </div>
 

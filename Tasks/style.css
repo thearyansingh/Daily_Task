@@ -1,6 +1,4 @@
-* {
-  transition: background-color 0.3s, color 0.3s;
-}
+
 :root {
   --bg-color:  #0F172A;
   --text-color: white;
@@ -27,12 +25,18 @@ background: var(--bg-color);
 #theme-toggle {
   display: none;
 }
+#menu-toggle{
+  display: none;
+}
 .toggle-label {
   cursor: pointer;
   font-size: 20px;
   background: #7F22FE;
   padding: 10px 14px;
   border-radius: 50px;
+}
+.sidebar{
+  display: none;
 }
 
 .header-div{
@@ -43,7 +47,7 @@ background: var(--bg-color);
     /* background-color: rgb(15, 23, 42); */
     color: white;
     height: 5rem;
-    padding: 0px 60px 0px 60px;
+    padding: 1rem;
     border-bottom: 1px solid white; 
   
 
@@ -84,8 +88,15 @@ background: var(--bg-color);
 .right-part{
     display: flex;
     align-items: center;
+  
     gap: 1rem;
 }
+.hamburger-label{
+  display: none;
+  cursor: pointer;
+}
+
+
 #About{
     display: flex;
     flex-direction: row;
@@ -196,6 +207,7 @@ background-color:#4A2271;
     margin-top: 100px;
     margin-bottom: 200px;
     color: aliceblue;
+   
     
 }
 #Contact h2{
@@ -267,13 +279,13 @@ color: rgb(233, 182, 242);
 }
 
 
-.contact-block img{
+.contact-img{
   width: 100%;
 }
 .form-field{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
     align-items: center;
      border: none;
     gap:20px;
@@ -297,13 +309,84 @@ align-items: center;
   }
 } */
 
+.contact-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 
  @media (max-width: 768px) {
-
-  .navbar {
-    display: none;
+  .app{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .hamburger-label{
+    display: block;
+  }
+  .sidebar{
+  display: block;
+}
+  #hamburger-icon {
+    font-size: 32px;
+    color: white;
+  }
+
+
+  .sidebar {
+
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 90vw;
+    height: 100vh;
+    background: #020617;
+    padding-top: 3rem;
+    transition: left 0.3s ease;
+  }
+
+   .sidebar-list {
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    gap:2rem;
+    padding-left: 24px;
+    text-decoration: none;
+
+  } 
+ 
+
+  .sidebar a {
+    font-size: 18px;
+    color: #e5e7eb;
+    text-decoration: none;
+  }
+   #menu-toggle:checked ~ .sidebar {
+    left: 0;
+  }
+  .header-div{
+    gap:10px;
+    padding-block: 0rem;
+  }
+  .toggle-label{
+    font-size: 10px;
+    width: 2.5rem;
+    padding: 5px;
+  }
+  .head-button{
+    padding: 5px 8px ;
+    font-size: 0.8rem;
+  }
+  .head-name{
+    font-size:15px
+  }
+  
+ .navbar{
+  display: none;
+ }
 
   #About {
     flex-direction: column;
@@ -316,8 +399,18 @@ align-items: center;
 
   .contact-block {
     grid-template-columns: 1fr;
+    
+  }
+  .Experience-block{
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
+  /* .input-box{
+  padding-inline: 10px;
+  } */
+
+ 
 }
 
 
